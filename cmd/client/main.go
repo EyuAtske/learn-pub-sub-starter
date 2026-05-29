@@ -23,7 +23,7 @@ func main() {
 	queuetype := pubsub.Transient
 	_, _, err = pubsub.DeclareAndBind(con, routing.ExchangePerilDirect, queueName, routing.PauseKey, queuetype)
 	if err != nil{
-		fmt.Errorf(err.Error())
+		fmt.Print(err.Error())
 		return
 	}
 	fmt.Println("Connection was successfull")
